@@ -1,0 +1,12 @@
+mixin page(title, data)
+    doctype html
+    html(lang="en")
+        head
+            meta(charset="utf-8")
+            meta(name="viewport" content="width=device-width, initial-scale=1.0")
+            title= title
+            link(rel='stylesheet', href='styles/styles.css')
+            link(rel='stylesheet', href='styles/reset.css')
+        body
+            .wrapper
+                +wrapper(data)
