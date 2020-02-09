@@ -4,7 +4,28 @@ include build/project.pug
 	let pageTitle = "Denim";
 
 	let pageData = {
-
+		city: "Nîmes",
+		menuItems: [ "Woman", "Man", "New" ],
+		interactionItems: [
+			{
+				width: "20",
+				height: "20",
+				src: "../components/header/_img/search-icon.svg",
+				alt: "Search"
+			},
+			{
+				width: "20",
+				height: "20",
+				src: "../components/header/_img/cart-icon.svg",
+				alt: "Cart"
+			}
+		],
+		headerPic: {
+			width: "512",
+			height: "631",
+			src: "../components/header/_img/splash.png",
+			alt: "Woman in Denim clothes",
+		}
 	};
 
 +page(pageTitle, pageData)

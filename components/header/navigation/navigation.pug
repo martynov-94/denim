@@ -1,0 +1,11 @@
+mixin navigation(menuItems, interactionItems)
+    nav
+        ul.navigation__menu
+            each item in menuItems
+                li.navigation__menu-item= item
+    ul.navigation__interaction
+        each item in interactionItems
+            li.navigation__interaction-item
+                button
+                    img(width=item.width, height=item.height, src=item.src, alt=item.alt)
+                

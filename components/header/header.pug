@@ -1,4 +1,9 @@
-//- include main-menu/main-menu.pug
+include navigation/navigation.pug
 
-mixin header()
-    
+mixin header(city, menuItems, interactionItems, pic)
+    .header__city-choice= city
+    .header__navigation
+        +navigation(menuItems, interactionItems)
+    img.header__pic(width=pic.width, height=pic.height, src=pic.src, alt=pic.alt)
+    .header__motto
+    button.header__cta-btn
