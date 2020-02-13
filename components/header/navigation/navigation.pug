@@ -5,7 +5,6 @@ mixin navigation(menuItems, interactionItems)
                 li.navigation__menu-item= item
     ul.navigation__interaction
         each item in interactionItems
-            li.navigation__interaction-item
-                button
-                    img(width=item.width, height=item.height, src=item.src, alt=item.alt)
+            li.navigation__interaction-item(style= "background-image: url(" + item.backgroundImage + ")")
+                    
                 

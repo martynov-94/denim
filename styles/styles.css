@@ -11,3 +11,85 @@ html {
 body {
   margin: 0;
   padding: 0; }
+
+.navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  width: 100%; }
+  .navigation__menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: 4.7vw;
+    margin-right: 15vw; }
+  .navigation__menu-item {
+    font: 500 1rem/1.1875 "Work Sans", sans-serif; }
+  .navigation__menu-item:not(:last-of-type), .navigation__interaction-item:not(:last-of-type) {
+    margin-right: 7.8vw; }
+  .navigation__interaction {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-right: 4.7vw; }
+  .navigation__interaction-item {
+    width: 20px;
+    height: 20px;
+    background: no-repeat center; }
+
+.motto__intro {
+  display: block;
+  margin-bottom: 8px;
+  font: 1.125rem/1 "Work Sans", sans-serif;
+  color: #727A82; }
+
+.motto__punchline {
+  display: block;
+  font: 5.375rem/1 "Anton", sans-serif;
+  color: #151C22;
+  text-transform: uppercase; }
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-bottom: 50px;
+  background-color: #f1f2f4; }
+  .header__city-choice {
+    width: 100%;
+    padding: 20px 0;
+    font-family: "Work Sans", sans-serif;
+    font-size: 1.5rem;
+    line-height: 1.166;
+    font-weight: bold;
+    color: #151C22;
+    text-align: center;
+    background-color: white; }
+  .header__navigation {
+    margin: 24px auto 40px; }
+  .header__pic {
+    max-width: 61.2%;
+    height: auto;
+    -o-object-fit: scale-down;
+    object-fit: scale-down; }
+  .header__motto {
+    margin: 50px auto 40px; }
+  .header__cta-btn {
+    padding: 27px 16px;
+    font: bold 1rem/1.1875 "Work Sans", sans-serif;
+    color: #FFFFFF;
+    border: 0;
+    background-color: #151C22; }

@@ -1,9 +1,11 @@
 include navigation/navigation.pug
+include motto/motto.pug
 
-mixin header(city, menuItems, interactionItems, pic)
-    .header__city-choice= city
-    .header__navigation
-        +navigation(menuItems, interactionItems)
-    img.header__pic(width=pic.width, height=pic.height, src=pic.src, alt=pic.alt)
+mixin header(data)
+    .header__city-choice= data.city
+    .header__navigation.navigation
+        +navigation(data.menuItems, data.interactionItems)
+    img.header__pic(width=data.mainPic.width, height=data.mainPic.height, src=data.mainPic.src, alt=data.mainPic.alt)
     .header__motto
-    button.header__cta-btn
+        +motto(data.motto)
+    button.header__cta-btn= data.ctaBtn

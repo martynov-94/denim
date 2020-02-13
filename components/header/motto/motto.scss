@@ -1,0 +1,17 @@
+.motto {
+    &__intro {
+        display: block;
+        margin-bottom: 8px;
+
+        font: 1.125rem/1 "Work Sans", sans-serif;
+        color: #727A82;
+    }
+
+    &__punchline {
+        display: block;
+
+        font: 5.375rem/1 "Anton", sans-serif;
+        color: #151C22;
+        text-transform: uppercase;
+    }
+}

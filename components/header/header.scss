@@ -1,5 +1,50 @@
 @import "navigation/navigation";
+@import "motto/motto";
 
 .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 50px;
     
+    background-color: $bg-color-header;
+
+    &__city-choice {
+        width: 100%;
+        padding: 20px 0;
+
+        font-family: "Work Sans", sans-serif;
+        font-size: 1.5rem;
+        line-height: 1.166;
+        font-weight: bold;
+        color: #151C22;
+        text-align: center;
+
+        background-color: $bg-color;
+    }
+
+    &__navigation {
+        margin: 24px auto 40px;
+    }
+
+    &__pic {
+        max-width: 61.2%;
+        height: auto;
+
+        object-fit: scale-down;
+    }
+
+    &__motto {
+        margin: 50px auto 40px;
+    }
+
+    &__cta-btn {
+        padding: 27px 16px;
+
+        font: bold 1rem/1.1875 "Work Sans", sans-serif;
+        color: #FFFFFF;
+
+        border: 0;
+        background-color: #151C22;
+    }
 }
