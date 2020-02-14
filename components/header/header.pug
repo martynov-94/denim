@@ -1,11 +1,15 @@
-include navigation/navigation.pug
+include main-menu/main-menu.pug
+include interaction-panel/interaction-panel.pug
 include motto/motto.pug
 
 mixin header(data)
     .header__city-choice= data.city
-    .header__navigation.navigation
-        +navigation(data.menuItems, data.interactionItems)
-    img.header__pic(width=data.mainPic.width, height=data.mainPic.height, src=data.mainPic.src, alt=data.mainPic.alt)
+    nav
+        ul.header__main-menu.main-menu
+            +main-menu(data.mainMenuItems)
+    ul.header__interaction-panel.interaction-panel
+        +interaction-panel(data.interactionPanelItems)
+    img.header__hero-image(width=data.heroImage.width, height=data.heroImage.height, src=data.heroImage.src, alt=data.heroImage.alt)
     .header__motto
         +motto(data.motto)
     button.header__cta-btn= data.ctaBtn

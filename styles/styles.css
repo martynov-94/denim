@@ -12,36 +12,10 @@ body {
   margin: 0;
   padding: 0; }
 
-.navigation {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-box-align: end;
-  -ms-flex-align: end;
-  align-items: flex-end;
-  width: 100%; }
-  .navigation__menu {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    margin-left: 4.7vw;
-    margin-right: 15vw; }
-  .navigation__menu-item {
-    font: 500 1rem/1.1875 "Work Sans", sans-serif; }
-  .navigation__menu-item:not(:last-of-type), .navigation__interaction-item:not(:last-of-type) {
-    margin-right: 7.8vw; }
-  .navigation__interaction {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    margin-right: 4.7vw; }
-  .navigation__interaction-item {
-    width: 20px;
-    height: 20px;
-    background: no-repeat center; }
+.interaction-panel__item {
+  width: 20px;
+  height: 20px;
+  background: no-repeat center; }
 
 .motto__intro {
   display: block;
@@ -80,7 +54,7 @@ body {
     background-color: white; }
   .header__navigation {
     margin: 24px auto 40px; }
-  .header__pic {
+  .header__hero-image {
     max-width: 61.2%;
     height: auto;
     -o-object-fit: scale-down;

@@ -1,4 +1,5 @@
-@import "navigation/navigation";
+@import "main-menu/main-menu";
+@import "interaction-panel/interaction-panel";
 @import "motto/motto";
 
 .header {
@@ -27,7 +28,7 @@
         margin: 24px auto 40px;
     }
 
-    &__pic {
+    &__hero-image {
         max-width: 61.2%;
         height: auto;
 
