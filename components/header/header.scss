@@ -1,45 +1,56 @@
 @import "main-menu/main-menu";
 @import "interaction-panel/interaction-panel";
 @import "motto/motto";
+@import "main-social-links/main-social-links";
 
 .header {
     display: grid;
     grid-template-areas: 
-        "city   city"
-        "nav    interaction"
-        "img    img"
-        "motto  motto"
-        "link   link";
+        "city        city"
+        "nav         interaction"
+        "img         img"
+        "motto-link  motto-link";
+    grid-template-columns: 1fr 1fr;
     justify-items: center;
-    padding-bottom: 50px;
+    padding: 0 $header-horiz-padding-320 50px;
     
-    background-color: $bg-color-header;
+    background-color: $header-bg-color;
+
+    @media screen and (min-width: $breakpoint-medium) {
+        grid-template-areas: 
+            "city   city"
+            "nav    interaction"
+            "motto-link  img"
+            "down   social";
+        grid-column-gap: 8.7vw;
+    }
 
     &__city-choice {
         grid-area: city;
-        width: 100%;
+        align-self: stretch;
+        width: calc(100% + 2 * #{$header-horiz-padding-320});
         margin-bottom: 24px;
         padding: 20px 0;
-
+        
         font: bold 1.5rem/1.166 $font-default;
         color: #151C22;
         text-align: center;
 
-        background-color: $bg-color;
+        background-color: $main-bg-color;
     }
 
     &__main-menu {
         grid-area: nav;
         justify-self: start;
         align-self: end;
-        margin-left: $menu-margin-320;
+        // margin-left: $menu-margin-320;
         margin-right: 12vw;
     }
 
     &__interaction-panel {
         grid-area: interaction;
         justify-self: end;
-        margin-right: $menu-margin-320;
+        // margin-right: $menu-margin-320;
     }
 
     &__hero-image {
@@ -49,15 +60,37 @@
         margin-top: 60px;
 
         object-fit: scale-down;
+
+        @media screen and (min-width: $breakpoint-medium) {
+            justify-self: start;
+            align-self: end;
+            width: 34vw;
+            max-width: none;
+        }
+    }
+
+    &__motto-link-wrapper {
+        grid-area: motto-link;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 50px;
+
+        @media screen and (min-width: $breakpoint-medium) {
+            justify-self: end;
+            align-self: end;
+            margin-top: 0;
+        }
     }
 
     &__motto {
-        grid-area: motto;
-        margin: 50px auto 40px;
+
+        @media screen and (min-width: $breakpoint-medium) {
+        }
     }
 
     &__collection-link {
-        grid-area: link;
+        margin-top: 40px;
         padding: 25px 16px;
 
         font: bold 1rem/1.1875 $font-default;
@@ -66,5 +99,38 @@
         color: #FFFFFF;
 
         background-color: #151C22;
+
+        @media screen and (min-width: $breakpoint-medium) {
+            margin-top: 60px;
+        }
+    }
+
+    &__scroll-down,
+    &__social-links {
+        display: none;
+
+        @media screen and (min-width: $breakpoint-medium) {
+            display: block;
+        }
+    }
+
+    &__scroll-down {
+        width: 12px;
+        height: 30px;
+
+        background: no-repeat center;
+        
+        @media screen and (min-width: $breakpoint-medium) {
+            grid-area: down;
+            justify-self: start;
+        }
+    }
+
+    &__social-links {
+
+        @media screen and (min-width: $breakpoint-medium) {
+            grid-area: social;
+            justify-self: end;
+        }
     }
 }

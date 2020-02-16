@@ -10,5 +10,9 @@
 
     &__item:not(:last-of-type) {
         margin-right: $menu-items-margin-320;
+
+        @media screen and (min-width: $breakpoint-medium) {
+            margin-right: $menu-items-margin-768;
+        }
     }
 }

@@ -1,6 +1,7 @@
 include main-menu/main-menu.pug
 include interaction-panel/interaction-panel.pug
 include motto/motto.pug
+include main-social-links/main-social-links.pug
 
 mixin header(data)
     .header__city-choice= data.city
@@ -9,6 +10,10 @@ mixin header(data)
     ul.header__interaction-panel.interaction-panel
         +interaction-panel(data.interactionPanelItems)
     img.header__hero-image(width=data.heroImage.width, height=data.heroImage.height, src=data.heroImage.src, alt=data.heroImage.alt)
-    .header__motto
-        +motto(data.motto)
-    a.header__collection-link(href=data.collectionLink.href)= data.collectionLink.text
+    .header__motto-link-wrapper
+        .header__motto.motto
+            +motto(data.motto)
+        a.header__collection-link(href=data.collectionLink.href)= data.collectionLink.text
+    a.header__scroll-down(href=data.scrollDown.href style= "background-image: url(" + data.scrollDown.backgroundImage + ")")
+    ul.header__social-links.main-social-links
+        +main-social-links(data.socialLinks)
