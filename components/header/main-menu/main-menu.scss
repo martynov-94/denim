@@ -1,3 +1,7 @@
 .main-menu {
-    
+    display: flex;
+
+    &__item:not(:last-of-type) {
+        margin-right: $menu-items-margin-320;
+    }
 }

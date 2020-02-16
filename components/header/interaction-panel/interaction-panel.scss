@@ -1,8 +1,14 @@
 .interaction-panel {
+    display: flex;
+
     &__item {
         width: 20px;
         height: 20px;
 
         background: no-repeat center;
+    }
+
+    &__item:not(:last-of-type) {
+        margin-right: $menu-items-margin-320;
     }
 }

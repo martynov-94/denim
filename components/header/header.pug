@@ -4,12 +4,11 @@ include motto/motto.pug
 
 mixin header(data)
     .header__city-choice= data.city
-    nav
-        ul.header__main-menu.main-menu
-            +main-menu(data.mainMenuItems)
+    ul.header__main-menu.main-menu
+        +main-menu(data.mainMenuItems)
     ul.header__interaction-panel.interaction-panel
         +interaction-panel(data.interactionPanelItems)
     img.header__hero-image(width=data.heroImage.width, height=data.heroImage.height, src=data.heroImage.src, alt=data.heroImage.alt)
     .header__motto
         +motto(data.motto)
-    button.header__cta-btn= data.ctaBtn
+    a.header__collection-link(href=data.collectionLink.href)= data.collectionLink.text

@@ -1,6 +1,7 @@
 html {
   -webkit-box-sizing: border-box;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  scroll-behavior: smooth; }
 
 *,
 *::before,
@@ -10,12 +11,26 @@ html {
 
 body {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  font-family: "Work Sans", sans-serif; }
 
-.interaction-panel__item {
-  width: 20px;
-  height: 20px;
-  background: no-repeat center; }
+.main-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .main-menu__item:not(:last-of-type) {
+    margin-right: 7.8vw; }
+
+.interaction-panel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .interaction-panel__item {
+    width: 20px;
+    height: 20px;
+    background: no-repeat center; }
+  .interaction-panel__item:not(:last-of-type) {
+    margin-right: 7.8vw; }
 
 .motto__intro {
   display: block;
@@ -30,40 +45,65 @@ body {
   text-transform: uppercase; }
 
 .header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: -ms-grid;
+  display: grid;
+  grid-template-areas: "city   city" "nav    interaction" "img    img" "motto  motto" "link   link";
+  justify-items: center;
   padding-bottom: 50px;
   background-color: #f1f2f4; }
   .header__city-choice {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: city;
     width: 100%;
+    margin-bottom: 24px;
     padding: 20px 0;
-    font-family: "Work Sans", sans-serif;
-    font-size: 1.5rem;
-    line-height: 1.166;
-    font-weight: bold;
+    font: bold 1.5rem/1.166 "Work Sans", sans-serif;
     color: #151C22;
     text-align: center;
     background-color: white; }
-  .header__navigation {
-    margin: 24px auto 40px; }
+  .header__main-menu {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: nav;
+    -ms-grid-column-align: start;
+    justify-self: start;
+    -ms-grid-row-align: end;
+    align-self: end;
+    margin-left: 4.7vw;
+    margin-right: 12vw; }
+  .header__interaction-panel {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    grid-area: interaction;
+    -ms-grid-column-align: end;
+    justify-self: end;
+    margin-right: 4.7vw; }
   .header__hero-image {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: img;
     max-width: 61.2%;
     height: auto;
+    margin-top: 60px;
     -o-object-fit: scale-down;
     object-fit: scale-down; }
   .header__motto {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: motto;
     margin: 50px auto 40px; }
-  .header__cta-btn {
-    padding: 27px 16px;
+  .header__collection-link {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: link;
+    padding: 25px 16px;
     font: bold 1rem/1.1875 "Work Sans", sans-serif;
+    text-align: center;
+    text-decoration: none;
     color: #FFFFFF;
-    border: 0;
     background-color: #151C22; }
