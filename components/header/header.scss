@@ -22,7 +22,8 @@
             "nav    interaction"
             "motto-link  img"
             "down   social";
-        grid-column-gap: 8.7vw;
+        grid-column-gap: 5.7vw;
+        padding: 0 $header-horiz-padding-768 45px;
     }
 
     &__city-choice {
@@ -33,24 +34,27 @@
         padding: 20px 0;
         
         font: bold 1.5rem/1.166 $font-default;
-        color: #151C22;
+        color: $main-black;
         text-align: center;
 
         background-color: $main-bg-color;
+
+        @media screen and (min-width: $breakpoint-medium) { 
+            width: calc(100% + 2 * #{$header-horiz-padding-768});
+            margin-bottom: 45px;
+        }
     }
 
     &__main-menu {
         grid-area: nav;
         justify-self: start;
         align-self: end;
-        // margin-left: $menu-margin-320;
         margin-right: 12vw;
     }
 
     &__interaction-panel {
         grid-area: interaction;
         justify-self: end;
-        // margin-right: $menu-margin-320;
     }
 
     &__hero-image {
@@ -64,8 +68,12 @@
         @media screen and (min-width: $breakpoint-medium) {
             justify-self: start;
             align-self: end;
-            width: 34vw;
-            max-width: none;
+            width: 34.38vw;
+            max-width: 390px;
+            margin-top: 25px;
+            margin-left: 2.85vw;
+
+            object-fit: initial;
         }
     }
 
@@ -98,7 +106,7 @@
         text-decoration: none;
         color: #FFFFFF;
 
-        background-color: #151C22;
+        background-color: $main-black;
 
         @media screen and (min-width: $breakpoint-medium) {
             margin-top: 60px;
@@ -108,19 +116,17 @@
     &__scroll-down,
     &__social-links {
         display: none;
-
-        @media screen and (min-width: $breakpoint-medium) {
-            display: block;
-        }
     }
 
     &__scroll-down {
         width: 12px;
         height: 30px;
+        margin-top: 70px;
 
         background: no-repeat center;
         
         @media screen and (min-width: $breakpoint-medium) {
+            display: block;
             grid-area: down;
             justify-self: start;
         }
@@ -129,8 +135,10 @@
     &__social-links {
 
         @media screen and (min-width: $breakpoint-medium) {
+            display: flex;
             grid-area: social;
             justify-self: end;
+            align-self: end;
         }
     }
 }

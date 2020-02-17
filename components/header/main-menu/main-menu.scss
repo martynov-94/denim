@@ -8,4 +8,13 @@
             margin-right: $menu-items-margin-768;
         }
     }
+
+    &__item {
+        font: 500 1rem/1.1875 $font-default;
+        color: $main-black;
+
+        @media screen and (min-width: $breakpoint-medium) {
+            
+        }
+    }
 }

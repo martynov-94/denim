@@ -1,16 +1,18 @@
 // colors:
 $main-bg-color: hsla(0, 0%, 100%, 1);
 $header-bg-color: hsla(220, 12%, 95%, 1); 
+$main-black: #151C22;
 
 // fonts:
 $font-default: "Work Sans", sans-serif;
 
 // space:
-$menu-items-margin-320: 7.8vw;
-$menu-items-margin-768: 35px;
+$menu-items-margin-320: 7.81vw;
+$menu-items-margin-768: 4.56vw;
 $menu-items-margin-1366: $menu-items-margin-768;
 
-$header-horiz-padding-320: 4.7vw;
+$header-horiz-padding-320: 4.69vw;
+$header-horiz-padding-768: 5.86vw;
 
 // other:
 $breakpoint-medium: 48em;

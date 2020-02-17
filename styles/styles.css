@@ -15,15 +15,30 @@ body {
   padding: 0;
   font-family: "Work Sans", sans-serif; }
 
+button {
+  display: inline-block;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none; }
+
+button:focus {
+  outline: 1px solid #0069ed; }
+
 .main-menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
   .main-menu__item:not(:last-of-type) {
-    margin-right: 7.8vw; }
+    margin-right: 7.81vw; }
     @media screen and (min-width: 48em) {
       .main-menu__item:not(:last-of-type) {
-        margin-right: 35px; } }
+        margin-right: 4.56vw; } }
+  .main-menu__item {
+    font: 500 1rem/1.1875 "Work Sans", sans-serif;
+    color: #151C22; }
 
 .interaction-panel {
   display: -webkit-box;
@@ -34,10 +49,10 @@ body {
     height: 20px;
     background: no-repeat center; }
   .interaction-panel__item:not(:last-of-type) {
-    margin-right: 7.8vw; }
+    margin-right: 7.81vw; }
     @media screen and (min-width: 48em) {
       .interaction-panel__item:not(:last-of-type) {
-        margin-right: 35px; } }
+        margin-right: 4.56vw; } }
 
 .motto {
   display: -webkit-box;
@@ -55,16 +70,34 @@ body {
     margin-bottom: 8px;
     font: 1.125rem/1 "Work Sans", sans-serif;
     color: #727A82; }
+    @media screen and (min-width: 48em) {
+      .motto__intro {
+        -ms-flex-item-align: start;
+        align-self: flex-start;
+        margin-bottom: 15px;
+        padding-left: 4px; } }
   .motto__punchline {
     display: block;
     font: 5.375rem/1 "Anton", sans-serif;
     color: #151C22;
     text-transform: uppercase; }
+    @media screen and (min-width: 48em) {
+      .motto__punchline {
+        font-size: 6.125rem; } }
 
 .main-social-links {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
+  .main-social-links__item:not(:last-of-type) {
+    margin-right: 4.5vw; }
+  .main-social-links__item {
+    font: 500 0.875rem/1.143 "Work Sans", sans-serif;
+    color: #151C22; }
+    .main-social-links__item a {
+      text-decoration: none; }
+      .main-social-links__item a:visited {
+        color: #151C22; }
 
 .header {
   display: -ms-grid;
@@ -73,12 +106,13 @@ body {
   -ms-grid-columns: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
   justify-items: center;
-  padding: 0 4.7vw 50px;
+  padding: 0 4.69vw 50px;
   background-color: #f1f2f4; }
   @media screen and (min-width: 48em) {
     .header {
       grid-template-areas: "city   city" "nav    interaction" "motto-link  img" "down   social";
-      grid-column-gap: 8.7vw; } }
+      grid-column-gap: 5.7vw;
+      padding: 0 5.86vw 45px; } }
   .header__city-choice {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
@@ -86,13 +120,17 @@ body {
     grid-area: city;
     -ms-grid-row-align: stretch;
     align-self: stretch;
-    width: calc(100% + 2 * 4.7vw);
+    width: calc(100% + 2 * 4.69vw);
     margin-bottom: 24px;
     padding: 20px 0;
     font: bold 1.5rem/1.166 "Work Sans", sans-serif;
     color: #151C22;
     text-align: center;
     background-color: white; }
+    @media screen and (min-width: 48em) {
+      .header__city-choice {
+        width: calc(100% + 2 * 5.86vw);
+        margin-bottom: 45px; } }
   .header__main-menu {
     -ms-grid-row: 2;
     -ms-grid-column: 1;
@@ -125,8 +163,12 @@ body {
         -ms-flex-item-align: end;
         -ms-grid-row-align: end;
         align-self: end;
-        width: 34vw;
-        max-width: none; } }
+        width: 34.38vw;
+        max-width: 390px;
+        margin-top: 25px;
+        margin-left: 2.85vw;
+        -o-object-fit: initial;
+        object-fit: initial; } }
   .header__motto-link-wrapper {
     -ms-grid-row: 4;
     -ms-grid-column: 1;
@@ -164,23 +206,25 @@ body {
         margin-top: 60px; } }
   .header__scroll-down, .header__social-links {
     display: none; }
-    @media screen and (min-width: 48em) {
-      .header__scroll-down, .header__social-links {
-        display: block; } }
   .header__scroll-down {
     width: 12px;
     height: 30px;
+    margin-top: 70px;
     background: no-repeat center; }
     @media screen and (min-width: 48em) {
       .header__scroll-down {
+        display: block;
         grid-area: down;
         -ms-grid-column-align: start;
         justify-self: start; } }
   @media screen and (min-width: 48em) {
     .header__social-links {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
       grid-area: social;
-      -ms-grid-column-align: end;
-      justify-self: end; } }
+      justify-self: end;
+      align-self: end; } }
   @media screen and (min-width: 48em) {
     .header__city-choice {
     -ms-grid-row: 1;
