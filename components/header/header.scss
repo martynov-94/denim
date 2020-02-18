@@ -18,12 +18,21 @@
 
     @media screen and (min-width: $breakpoint-medium) {
         grid-template-areas: 
-            "city   city"
-            "nav    interaction"
+            "city        city"
+            "nav         interaction"
             "motto-link  img"
-            "down   social";
+            "down        social";
         grid-column-gap: 5.7vw;
         padding: 0 $header-horiz-padding-768 45px;
+    }
+
+    @media screen and (min-width: $breakpoint-large) {
+        grid-template-columns: repeat(4, auto);
+        grid-template-areas: 
+            "city   city        city    city"
+            "nav    .           img     interaction"
+            ".      motto-link  img     ."
+            "down   .           img     social";
     }
 
     &__city-choice {
@@ -33,7 +42,7 @@
         margin-bottom: 24px;
         padding: 20px 0;
         
-        font: bold 1.5rem/1.166 $font-default;
+        font: 800 1.5rem/0.70 $font-default;
         color: $main-black;
         text-align: center;
 
@@ -42,6 +51,7 @@
         @media screen and (min-width: $breakpoint-medium) { 
             width: calc(100% + 2 * #{$header-horiz-padding-768});
             margin-bottom: 45px;
+            padding: 25px 0;
         }
     }
 
@@ -50,6 +60,11 @@
         justify-self: start;
         align-self: end;
         margin-right: 12vw;
+
+        @media screen and (min-width: $breakpoint-large) {
+            align-self: start;
+            margin-right: 0;
+        }
     }
 
     &__interaction-panel {
@@ -59,7 +74,7 @@
 
     &__hero-image {
         grid-area: img;
-        max-width: 61.2%;
+        max-width: 63.125vw;
         height: auto;
         margin-top: 60px;
 
@@ -70,10 +85,19 @@
             align-self: end;
             width: 34.38vw;
             max-width: 390px;
-            margin-top: 25px;
+            margin-top: 28px;
             margin-left: 2.85vw;
 
             object-fit: initial;
+        }
+
+        @media screen and (min-width: $breakpoint-large) {
+            align-self: stretch;
+            min-width: 31.48vw;
+            margin: 0;
+            // max-width: none;
+
+            object-fit: cover;
         }
     }
 
@@ -87,7 +111,13 @@
         @media screen and (min-width: $breakpoint-medium) {
             justify-self: end;
             align-self: end;
+            align-items: flex-start;
             margin-top: 0;
+        }
+
+        @media screen and (min-width: $breakpoint-large) {
+            // justify-self: start;
+            align-items: flex-start;
         }
     }
 
@@ -98,10 +128,10 @@
     }
 
     &__collection-link {
-        margin-top: 40px;
-        padding: 25px 16px;
+        margin-top: 37px;
+        padding: 27px 1em;
 
-        font: bold 1rem/1.1875 $font-default;
+        font: bold 1rem/0.8 $font-default;
         text-align: center;
         text-decoration: none;
         color: #FFFFFF;
@@ -109,7 +139,13 @@
         background-color: $main-black;
 
         @media screen and (min-width: $breakpoint-medium) {
-            margin-top: 60px;
+            padding-left: 1.5em;
+            padding-right: 1.5em;
+            margin-top: 57px;
+        }
+
+        @media screen and (min-width: $breakpoint-medium) {
+            margin-top: 47px;
         }
     }
 
@@ -121,7 +157,7 @@
     &__scroll-down {
         width: 12px;
         height: 30px;
-        margin-top: 70px;
+        margin-top: 53px;
 
         background: no-repeat center;
         
@@ -129,6 +165,7 @@
             display: block;
             grid-area: down;
             justify-self: start;
+            align-self: end;
         }
     }
 

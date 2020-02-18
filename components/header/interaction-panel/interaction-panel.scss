@@ -14,5 +14,14 @@
         @media screen and (min-width: $breakpoint-medium) {
             margin-right: $menu-items-margin-768;
         }
+
+        @media screen and (min-width: $breakpoint-large) {
+            margin-right: 0;
+            margin-bottom: $menu-items-margin-1366;
+        }
+    }
+
+    @media screen and (min-width: $breakpoint-large) { 
+        flex-direction: column;
     }
 }

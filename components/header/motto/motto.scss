@@ -5,29 +5,40 @@
 
     &__intro {
         display: block;
-        margin-bottom: 8px;
+        margin-bottom: 15px;
 
-        font: 1.125rem/1 $font-default;
+        font: 1.125rem/0.8 $font-default;
         color: #727A82;
 
         @media screen and (min-width: $breakpoint-medium) {
             align-self: flex-start;
-            margin-bottom: 15px;
-            padding-left: 4px;
+            margin-bottom: 20px;
+            // padding-left: 4px;
+        }
+
+        @media screen and (min-width: $breakpoint-large) {
+            align-self: flex-start;
+            padding-left: 0;
         }
     }
 
     &__punchline {
         display: block;
 
-        font: 5.375rem/1 "Anton", sans-serif;
+        font: 5.375rem/0.88 "Anton", sans-serif;
         color: $main-black;
         text-transform: uppercase;
 
         @media screen and (min-width: $breakpoint-medium) {
+            margin-left: -0.1875rem;
+
             font-size: 6.125rem;
         }
-    }
 
-    
+        @media screen and (min-width: $breakpoint-large) {
+            margin-left: -0.3125rem;
+
+            font-size: 8rem;
+        }
+    }    
 }

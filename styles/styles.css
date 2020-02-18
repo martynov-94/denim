@@ -36,9 +36,22 @@ button:focus {
     @media screen and (min-width: 48em) {
       .main-menu__item:not(:last-of-type) {
         margin-right: 4.56vw; } }
+    @media screen and (min-width: 85.375em) {
+      .main-menu__item:not(:last-of-type) {
+        margin-right: 0;
+        margin-bottom: 35px; } }
   .main-menu__item {
-    font: 500 1rem/1.1875 "Work Sans", sans-serif;
+    font: 500 1rem/0.8 "Work Sans", sans-serif;
     color: #151C22; }
+  @media screen and (min-width: 85.375em) {
+    .main-menu {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-align: start;
+      -ms-flex-align: start;
+      align-items: flex-start; } }
 
 .interaction-panel {
   display: -webkit-box;
@@ -53,6 +66,16 @@ button:focus {
     @media screen and (min-width: 48em) {
       .interaction-panel__item:not(:last-of-type) {
         margin-right: 4.56vw; } }
+    @media screen and (min-width: 85.375em) {
+      .interaction-panel__item:not(:last-of-type) {
+        margin-right: 0;
+        margin-bottom: 35px; } }
+  @media screen and (min-width: 85.375em) {
+    .interaction-panel {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column; } }
 
 .motto {
   display: -webkit-box;
@@ -67,37 +90,59 @@ button:focus {
   align-items: center; }
   .motto__intro {
     display: block;
-    margin-bottom: 8px;
-    font: 1.125rem/1 "Work Sans", sans-serif;
+    margin-bottom: 15px;
+    font: 1.125rem/0.8 "Work Sans", sans-serif;
     color: #727A82; }
     @media screen and (min-width: 48em) {
       .motto__intro {
         -ms-flex-item-align: start;
         align-self: flex-start;
-        margin-bottom: 15px;
-        padding-left: 4px; } }
+        margin-bottom: 20px; } }
+    @media screen and (min-width: 85.375em) {
+      .motto__intro {
+        -ms-flex-item-align: start;
+        align-self: flex-start;
+        padding-left: 0; } }
   .motto__punchline {
     display: block;
-    font: 5.375rem/1 "Anton", sans-serif;
+    font: 5.375rem/0.88 "Anton", sans-serif;
     color: #151C22;
     text-transform: uppercase; }
     @media screen and (min-width: 48em) {
       .motto__punchline {
+        margin-left: -0.1875rem;
         font-size: 6.125rem; } }
+    @media screen and (min-width: 85.375em) {
+      .motto__punchline {
+        margin-left: -0.3125rem;
+        font-size: 8rem; } }
 
 .main-social-links {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
   .main-social-links__item:not(:last-of-type) {
-    margin-right: 4.5vw; }
+    margin-right: 4.56vw; }
+    @media screen and (min-width: 85.375em) {
+      .main-social-links__item:not(:last-of-type) {
+        margin-right: 0;
+        margin-top: 35px; } }
   .main-social-links__item {
-    font: 500 0.875rem/1.143 "Work Sans", sans-serif;
+    font: 500 0.875rem/0.7 "Work Sans", sans-serif;
     color: #151C22; }
     .main-social-links__item a {
       text-decoration: none; }
       .main-social-links__item a:visited {
         color: #151C22; }
+  @media screen and (min-width: 85.375em) {
+    .main-social-links {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+      flex-direction: column-reverse;
+      -webkit-box-align: end;
+      -ms-flex-align: end;
+      align-items: flex-end; } }
 
 .header {
   display: -ms-grid;
@@ -110,9 +155,14 @@ button:focus {
   background-color: #f1f2f4; }
   @media screen and (min-width: 48em) {
     .header {
-      grid-template-areas: "city   city" "nav    interaction" "motto-link  img" "down   social";
+      grid-template-areas: "city        city" "nav         interaction" "motto-link  img" "down        social";
       grid-column-gap: 5.7vw;
       padding: 0 5.86vw 45px; } }
+  @media screen and (min-width: 85.375em) {
+    .header {
+      -ms-grid-columns: (auto)[4];
+      grid-template-columns: repeat(4, auto);
+      grid-template-areas: "city   city        city    city" "nav    .           img     interaction" ".      motto-link  img     ." "down   .           img     social"; } }
   .header__city-choice {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
@@ -123,14 +173,15 @@ button:focus {
     width: calc(100% + 2 * 4.69vw);
     margin-bottom: 24px;
     padding: 20px 0;
-    font: bold 1.5rem/1.166 "Work Sans", sans-serif;
+    font: 800 1.5rem/0.7 "Work Sans", sans-serif;
     color: #151C22;
     text-align: center;
     background-color: white; }
     @media screen and (min-width: 48em) {
       .header__city-choice {
         width: calc(100% + 2 * 5.86vw);
-        margin-bottom: 45px; } }
+        margin-bottom: 45px;
+        padding: 25px 0; } }
   .header__main-menu {
     -ms-grid-row: 2;
     -ms-grid-column: 1;
@@ -140,6 +191,12 @@ button:focus {
     -ms-grid-row-align: end;
     align-self: end;
     margin-right: 12vw; }
+    @media screen and (min-width: 85.375em) {
+      .header__main-menu {
+        -ms-flex-item-align: start;
+        -ms-grid-row-align: start;
+        align-self: start;
+        margin-right: 0; } }
   .header__interaction-panel {
     -ms-grid-row: 2;
     -ms-grid-column: 2;
@@ -151,7 +208,7 @@ button:focus {
     -ms-grid-column: 1;
     -ms-grid-column-span: 2;
     grid-area: img;
-    max-width: 61.2%;
+    max-width: 63.125vw;
     height: auto;
     margin-top: 60px;
     -o-object-fit: scale-down;
@@ -165,10 +222,19 @@ button:focus {
         align-self: end;
         width: 34.38vw;
         max-width: 390px;
-        margin-top: 25px;
+        margin-top: 28px;
         margin-left: 2.85vw;
         -o-object-fit: initial;
         object-fit: initial; } }
+    @media screen and (min-width: 85.375em) {
+      .header__hero-image {
+        -ms-flex-item-align: stretch;
+        -ms-grid-row-align: stretch;
+        align-self: stretch;
+        min-width: 31.48vw;
+        margin: 0;
+        -o-object-fit: cover;
+        object-fit: cover; } }
   .header__motto-link-wrapper {
     -ms-grid-row: 4;
     -ms-grid-column: 1;
@@ -192,31 +258,46 @@ button:focus {
         -ms-flex-item-align: end;
         -ms-grid-row-align: end;
         align-self: end;
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        align-items: flex-start;
         margin-top: 0; } }
+    @media screen and (min-width: 85.375em) {
+      .header__motto-link-wrapper {
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        align-items: flex-start; } }
   .header__collection-link {
-    margin-top: 40px;
-    padding: 25px 16px;
-    font: bold 1rem/1.1875 "Work Sans", sans-serif;
+    margin-top: 37px;
+    padding: 27px 1em;
+    font: bold 1rem/0.8 "Work Sans", sans-serif;
     text-align: center;
     text-decoration: none;
     color: #FFFFFF;
     background-color: #151C22; }
     @media screen and (min-width: 48em) {
       .header__collection-link {
-        margin-top: 60px; } }
+        padding-left: 1.5em;
+        padding-right: 1.5em;
+        margin-top: 57px; } }
+    @media screen and (min-width: 48em) {
+      .header__collection-link {
+        margin-top: 47px; } }
   .header__scroll-down, .header__social-links {
     display: none; }
   .header__scroll-down {
     width: 12px;
     height: 30px;
-    margin-top: 70px;
+    margin-top: 53px;
     background: no-repeat center; }
     @media screen and (min-width: 48em) {
       .header__scroll-down {
         display: block;
         grid-area: down;
         -ms-grid-column-align: start;
-        justify-self: start; } }
+        justify-self: start;
+        -ms-grid-row-align: end;
+        align-self: end; } }
   @media screen and (min-width: 48em) {
     .header__social-links {
       display: -webkit-box;
@@ -250,3 +331,29 @@ button:focus {
     .header__social-links {
     -ms-grid-row: 4;
     -ms-grid-column: 3; } }
+  @media screen and (min-width: 85.375em) {
+    .header__city-choice {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 4; }
+    .header__main-menu {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1; }
+    .header__interaction-panel {
+    -ms-grid-row: 2;
+    -ms-grid-column: 4; }
+    .header__hero-image {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 3;
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 1; }
+    .header__motto-link-wrapper {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1; }
+    .header__scroll-down {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1; }
+    .header__social-links {
+    -ms-grid-row: 4;
+    -ms-grid-column: 4; } }
