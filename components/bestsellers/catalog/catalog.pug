@@ -1,0 +1,6 @@
+include catalog-item/catalog-item.pug
+
+mixin catalog(items) 
+    each item in items
+        li.catalog__item.catalog-item
+            +catalog-item(item)
