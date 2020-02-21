@@ -1,0 +1,25 @@
+.catalog-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    &__photo {
+        width: 100%;
+        margin-bottom: 15px;
+
+        object-fit: contain;
+    }
+
+    &__name {
+        margin-bottom: 10px;
+
+        font: 500 1rem/0.8 $font-default;
+        color: $main-black;
+    }
+
+    &__price {
+
+        font: bold 0.875rem/0.8 $font-default;
+        color: $main-black;
+    }
+}

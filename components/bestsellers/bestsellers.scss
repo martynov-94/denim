@@ -1,5 +1,52 @@
 @import "catalog/catalog";
 
 .bestsellers {
-    
+    display: grid;
+    grid-template-areas: 
+        "title"
+        "catalog"
+        "btn";
+    align-items: center;
+    padding-top: 60px;
+    padding-bottom: 82px;
+
+    &__title {
+        grid-area: title;
+        align-self: start;
+        margin-bottom: 40px;
+
+        font: bold 1.625rem/0.8 $font-default;
+    }
+
+    &__catalog {
+        grid-area: catalog;
+        margin-bottom: 40px;
+    }
+
+    &__view-all-btn {
+        position: relative;
+
+        grid-area: btn;
+        justify-self: center;
+        padding: 0 1.25vw;
+        border: 0;
+
+        font: 500 1rem/0.8 $font-default;
+        color: $main-black;
+
+        background-color: initial;
+
+        &::after {
+            position: absolute;
+            bottom: -7px;
+            left: 0;
+
+            display: block;
+            width: 100%;
+            height: 2px;
+
+            content: "";
+            background-color: black;
+        }
+    }
 }

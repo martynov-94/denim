@@ -4,4 +4,4 @@ mixin bestsellers(data)
     h2.bestsellers__title= data.title
     ul.bestsellers__catalog.catalog
         +catalog(data.catalog)
-    btn.bestsellers__biew-all-btn
+    button.bestsellers__view-all-btn= data.viewAllBtnText

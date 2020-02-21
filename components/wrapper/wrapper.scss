@@ -1,2 +1,11 @@
 .wrapper {
+    padding: 0 $horiz-padding-320;
+
+    @media screen and (min-width: $breakpoint-medium) {
+        padding: 0 $horiz-padding-768;
+    }
+
+    @media screen and (min-width: $breakpoint-large) {
+        padding: 0 $horiz-padding-1366;
+    }
 }
