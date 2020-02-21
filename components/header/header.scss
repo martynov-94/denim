@@ -15,7 +15,7 @@
     margin: 0 -#{$horiz-padding-320};
     padding: 0 $horiz-padding-320 50px;
     
-    background-color: $header-bg-color;
+    background-color: $gray-bg;
 
     @media screen and (min-width: $breakpoint-medium) {
         grid-template-areas: 
@@ -47,7 +47,7 @@
         padding: 20px 0;
         
         font: 800 1.5rem/0.70 $font-default;
-        color: $main-black;
+        color: $font-black;
         text-align: center;
 
         background-color: $main-bg-color;
@@ -142,7 +142,7 @@
         text-decoration: none;
         color: #FFFFFF;
 
-        background-color: $main-black;
+        background-color: $font-black;
 
         @media screen and (min-width: $breakpoint-medium) {
             padding-left: 1.5em;

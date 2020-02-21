@@ -1,4 +1,5 @@
 mixin catalog-item(data)
-    img.catalog-item__photo(src=data.photo.src, alt=data.photo.alt, width=data.photo.width, height=data.photo.height)
+    .catalog-item__photo-wrapper
+        img.catalog-item__photo(src=data.photo.src, alt=data.photo.alt, width=data.photo.width, height=data.photo.height)
     span.catalog-item__name= data.name
     span.catalog-item__price= data.price

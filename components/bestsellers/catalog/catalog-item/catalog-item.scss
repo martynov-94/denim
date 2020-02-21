@@ -3,23 +3,55 @@
     flex-direction: column;
     align-items: flex-start;
 
-    &__photo {
+    &__photo-wrapper {
+        position: relative;
+        overflow: hidden;
+
         width: 100%;
         margin-bottom: 15px;
+        padding-top: 123%;
+
+        @media screen and (min-width: $breakpoint-medium) {
+            margin-bottom: 25px;
+            padding-top: 108%;
+        }
+
+        @media screen and (min-width: $breakpoint-large) {
+            padding-top: 129%;
+        }
+    }
+    
+    &__photo {
+        position: absolute;
+        top: 0;
+        left: 0;
+        
+        width: 100%;
+        height: 100%;
 
         object-fit: contain;
     }
 
     &__name {
+        margin-top: auto;
         margin-bottom: 10px;
 
         font: 500 1rem/0.8 $font-default;
-        color: $main-black;
+        color: $font-black;
+
+        @media screen and (min-width: $breakpoint-medium) {
+            margin-bottom: 15px;
+
+            font-size: 1.125rem;
+        }
     }
 
     &__price {
-
         font: bold 0.875rem/0.8 $font-default;
-        color: $main-black;
+        color: $font-black;
+
+        @media screen and (min-width: $breakpoint-medium) {
+            font-size: 1rem;
+        }
     }
 }

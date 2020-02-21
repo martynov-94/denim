@@ -7,8 +7,18 @@
         "catalog"
         "btn";
     align-items: center;
-    padding-top: 60px;
-    padding-bottom: 82px;
+    padding: 60px 0 82px;
+
+    @media screen and (min-width: $breakpoint-medium) {
+        grid-template-areas: 
+            "title    btn"
+            "catalog  catalog";
+        padding: 100px 0;
+    }
+
+    @media screen and (min-width: $breakpoint-large) {
+        padding: 130px 0;
+    }
 
     &__title {
         grid-area: title;
@@ -16,11 +26,27 @@
         margin-bottom: 40px;
 
         font: bold 1.625rem/0.8 $font-default;
+
+        @media screen and (min-width: $breakpoint-medium) {
+            margin-bottom: 60px;
+
+            font-size: 1.75rem;
+        }
+
+        @media screen and (min-width: $breakpoint-medium) {
+            margin-bottom: 70px;
+
+            font-size: 2rem;
+        }
     }
 
     &__catalog {
         grid-area: catalog;
         margin-bottom: 40px;
+
+        @media screen and (min-width: $breakpoint-medium) {
+            margin-bottom: 0;
+        }
     }
 
     &__view-all-btn {
@@ -32,9 +58,16 @@
         border: 0;
 
         font: 500 1rem/0.8 $font-default;
-        color: $main-black;
+        color: $font-black;
 
         background-color: initial;
+
+        @media screen and (min-width: $breakpoint-medium) {
+            justify-self: end;
+            align-self: start;
+
+            font-size: 1.125rem;
+        }
 
         &::after {
             position: absolute;
