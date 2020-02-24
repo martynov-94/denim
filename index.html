@@ -33,7 +33,7 @@
           <li class="main-social-links__item"><a href="#0">Facebook</a></li>
         </ul>
       </header>
-      <section class="bestsellers">
+      <section class="bestsellers catalog-grid">
         <h2 class="bestsellers__title">Bestsellers</h2>
         <ul class="bestsellers__catalog catalog">
           <li class="catalog__item catalog-item">
@@ -48,19 +48,30 @@
           <li class="catalog__item catalog-item">
             <div class="catalog-item__photo-wrapper"><img class="catalog-item__photo" src="../components/bestsellers/catalog/_img/jacket-3.jpg" alt="Jacket" width="130" height="160"></div><span class="catalog-item__name">Jacket</span><span class="catalog-item__price">$160</span>
           </li>
-        </ul>
-        <button class="bestsellers__view-all-btn">View all</button>
+        </ul><a class="bestsellers__view-all-link view-all-link" href="#0">View all</a>
       </section>
       <div class="special-collection">
-        <section class="special-collection__offer special-offer">
-          <div class="special-offer__wrapper">
+        <div class="special-collection__offer-wrapper">
+          <section class="special-collection__offer special-offer">
             <h2 class="special-offer__title">Street fashion collection</h2>
             <div class="special-offer__date">Fall 2019</div><a class="special-offer__shop-link" href="#0">Shop now</a>
-          </div>
-        </section>
+          </section>
+        </div>
         <div class="special-collection__image-wrapper"><img class="special-collection__image" src="../components/special-collection/_img/offer-image.png" alt="Offer image" width="320" height="226"></div>
       </div>
-      <div class="categories"></div>
+      <section class="categories catalog-grid">
+        <h2 class="categories__title">Shop by category</h2>
+        <ul class="categories__catalog categories-catalog">
+          <li class="categories-catalog__item categories-item"><img class="categories-item__photo" src="../components/categories/_img/jeans.jpg" alt="Jeans" width="130" height="160"><span class="categories-item__name">Jeans</span>
+          </li>
+          <li class="categories-catalog__item categories-item"><img class="categories-item__photo" src="../components/categories/_img/overalls.png" alt="Overalls" width="130" height="126"><span class="categories-item__name">Overalls</span>
+          </li>
+          <li class="categories-catalog__item categories-item"><img class="categories-item__photo" src="../components/categories/_img/shirts.png" alt="Shirts" width="130" height="126"><span class="categories-item__name">Shirts</span>
+          </li>
+          <li class="categories-catalog__item categories-item"><img class="categories-item__photo" src="../components/categories/_img/jackets.png" alt="Jackets" width="130" height="160"><span class="categories-item__name">Jackets</span>
+          </li>
+        </ul><a class="categories__view-all-link view-all-link" href="#0">View all</a>
+      </section>
       <footer class="footer"></footer>
     </div>
   </body>

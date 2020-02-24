@@ -1,0 +1,31 @@
+@import "categories-catalog/categories-catalog";
+
+.categories {
+    padding: 60px 0 67px;
+
+
+    &__title {
+        grid-area: title;
+        margin-bottom: 40px;
+
+        font: bold 1.625rem/0.8 $font-default;
+        color: $font-black;
+    }
+
+    &__catalog {
+        grid-area: catalog;
+        margin-bottom: 40px;
+    }
+
+    &__view-all-link {
+        grid-area: link;
+        justify-self: center;
+
+        @media screen and (min-width: $breakpoint-medium) {
+            justify-self: end;
+            align-self: start;
+        }
+    }
+
+
+}

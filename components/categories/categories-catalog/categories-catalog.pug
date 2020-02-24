@@ -1,0 +1,6 @@
+include categories-item/categories-item.pug
+
+mixin categories-catalog(items)
+    each item in items
+        li.categories-catalog__item.categories-item
+            +categories-item(item)

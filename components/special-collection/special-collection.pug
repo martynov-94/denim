@@ -1,7 +1,8 @@
 include special-offer/special-offer.pug
 
 mixin special-collection(data)
-    section.special-collection__offer.special-offer
-        +special-offer(data.offer)
+    .special-collection__offer-wrapper
+        section.special-collection__offer.special-offer
+            +special-offer(data.offer)
     .special-collection__image-wrapper
         img.special-collection__image(src=data.image.src, alt=data.image.alt, width=data.image.width, height=data.image.height )

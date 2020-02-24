@@ -1,5 +1,4 @@
 mixin special-offer(data)
-    .special-offer__wrapper
-        h2.special-offer__title= data.title
-        .special-offer__date= data.date
-        a.special-offer__shop-link(href=data.shopLink.href)= data.shopLink.text
+    h2.special-offer__title= data.title
+    .special-offer__date= data.date
+    a.special-offer__shop-link(href=data.shopLink.href)= data.shopLink.text

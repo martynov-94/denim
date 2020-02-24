@@ -1,6 +1,10 @@
 @import "_constants";
 // @import "_fonts";
 
+// general styles:
+@import "catalog-grid";
+@import "view-all-link";
+
 // components:
 @import "../components/page/page";
 
@@ -9,3 +13,4 @@
 @import "../components/header/header";
 @import "../components/bestsellers/bestsellers";
 @import "../components/special-collection/special-collection";
+@import "../components/categories/categories";

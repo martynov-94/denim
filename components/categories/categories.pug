@@ -1,0 +1,7 @@
+include categories-catalog/categories-catalog.pug
+
+mixin categories(data)
+    h2.categories__title= data.title
+    ul.categories__catalog.categories-catalog
+        +categories-catalog(data.catalog)
+    a.categories__view-all-link.view-all-link(href=data.link.href)= data.link.text

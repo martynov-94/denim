@@ -4,4 +4,4 @@ mixin bestsellers(data)
     h2.bestsellers__title= data.title
     ul.bestsellers__catalog.catalog
         +catalog(data.catalog)
-    button.bestsellers__view-all-btn= data.viewAllBtnText
+    a.bestsellers__view-all-link.view-all-link(href=data.viewAllLink.href)= data.viewAllLink.text

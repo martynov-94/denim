@@ -1,0 +1,14 @@
+.catalog-grid {
+    display: grid;
+    grid-template-areas: 
+        "title"
+        "catalog"
+        "link";
+    align-items: center;
+
+    @media screen and (min-width: $breakpoint-medium) {
+        grid-template-areas: 
+            "title    link"
+            "catalog  catalog";
+    }
+}

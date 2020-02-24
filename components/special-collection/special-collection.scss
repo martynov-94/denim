@@ -3,10 +3,11 @@
 .special-collection {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    margin: 0 -#{$horiz-padding-320};
 
     @media screen and (min-width: $breakpoint-medium) {
         flex-direction: row-reverse;
+        margin: 0;
     }
 
     @media screen and (min-width: $breakpoint-large) {
@@ -14,22 +15,55 @@
     }
 
     &__image-wrapper {
-        margin: 0 -#{$horiz-padding-320};
+        position: relative;
+        padding-top: 70.625%;
 
         @media screen and (min-width: $breakpoint-medium) {
-            width: calc(50% + 15px);
-            margin: 0 -15px;
+            flex: 1.15;
+            padding-top: 42.33%;
+        }
+
+        @media screen and (min-width: $breakpoint-large) {
+            flex: 1.6;
+            margin-right: 0;
+            padding-top: 31.62%;
         }
     }
 
     &__image {
+        position: absolute;
+        top: 0;
+        left: 0;
+
         width: 100%;
-        height: auto;
+        height: 100%;
+
+        object-fit: cover;
+
+        @media screen and (min-width: $breakpoint-large) { 
+            object-position: 50% 0;
+        }
+    }
+
+    &__offer-wrapper {
+        padding: 20px 20px 0;
+
+        @media screen and (min-width: $breakpoint-medium) {
+            flex: 1;
+            padding-left: 0;
+            padding-bottom: 20px;
+        }
     }
 
     &__offer {
         @media screen and (min-width: $breakpoint-medium) {
-            width: 50%;
+            height: 100%;
+            padding: 50px 0 50px 50px;
+        }
+
+        @media screen and (min-width: $breakpoint-large) {
+            height: 100%;
+            padding: 70px 0 70px 70px;
         }
     }
 }

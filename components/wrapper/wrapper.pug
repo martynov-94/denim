@@ -1,9 +1,10 @@
 mixin wrapper(pageData)
     header.header
         +header(pageData.header)
-    section.bestsellers
+    section.bestsellers.catalog-grid
         +bestsellers(pageData.bestsellers)
     .special-collection
         +special-collection(pageData.specialCollection)
-    .categories
+    section.categories.catalog-grid
+        +categories(pageData.categories)
     footer.footer
