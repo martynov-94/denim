@@ -1,3 +1,4 @@
 mixin categories-item(data)
-    img.categories-item__photo(src=data.photo.src, alt=data.photo.alt, width=data.photo.width, height=data.photo.height)
+    .categories-item__photo-wrapper
+        img.categories-item__photo(src=data.photo.src, alt=data.photo.alt, width=data.photo.width, height=data.photo.height)
     span.categories-item__name= data.name

@@ -1,8 +1,13 @@
 @import "categories-catalog/categories-catalog";
 
 .categories {
+    width: 100%;
     padding: 60px 0 67px;
 
+    @media screen and (min-width: $breakpoint-medium) {
+        // margin-bottom: 50px;
+        padding: 100px 0 100px;
+    }
 
     &__title {
         grid-area: title;
@@ -14,16 +19,18 @@
 
     &__catalog {
         grid-area: catalog;
-        margin-bottom: 40px;
+        // margin-bottom: 12.5vw;
     }
 
     &__view-all-link {
         grid-area: link;
         justify-self: center;
+        margin-top: 12.5vw;
 
         @media screen and (min-width: $breakpoint-medium) {
             justify-self: end;
             align-self: start;
+            margin-top: 0;
         }
     }
 
