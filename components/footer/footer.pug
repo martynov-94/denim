@@ -1,0 +1,8 @@
+include footer-menu/footer-menu.pug
+include footer-social/footer-social.pug
+
+mixin footer(data)
+    ul.footer__menu.footer-menu
+        +footer-menu(data.city, data.menu)
+    ul.footer__social-links.footer-social
+        +footer-social(data.socialLinks)

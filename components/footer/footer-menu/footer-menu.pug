@@ -1,0 +1,5 @@
+mixin footer-menu(city, menu)
+    span.footer-menu__city= city
+    each item in menu
+        li.footer-menu__item
+            a(href=item.link)= item.text

@@ -1,0 +1,22 @@
+.footer-social {
+    display: flex;
+    align-items: flex-end;
+    
+    @media screen and (min-width: $breakpoint-medium) {
+        justify-content: center;
+    }
+
+    &__item:not(:last-of-type) {
+        margin-right: 10.625vw;
+
+        @media screen and (min-width: $breakpoint-medium) {
+            margin-right: 4.95vw;
+        }
+
+        @media screen and (min-width: $breakpoint-large) {
+            margin-right: 2.11vw;
+        }
+    }
+
+    
+}

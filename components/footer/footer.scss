@@ -1,0 +1,19 @@
+@import "footer-menu/footer-menu";
+@import "footer-social/footer-social";
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    margin: -#{$horiz-padding-320};
+    padding: 50px $horiz-padding-320;
+
+    background-color: $black-bg;
+
+    @media screen and (min-width: $breakpoint-medium) { 
+        margin: -#{$horiz-padding-768};
+    }
+
+    @media screen and (min-width: $breakpoint-large) { 
+        margin: -#{$horiz-padding-1366};
+    }
+}

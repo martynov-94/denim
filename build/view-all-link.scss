@@ -1,6 +1,6 @@
 .view-all-link {
     position: relative;
-    padding: 0 1.25vw;
+    padding: 0 4px;
     border: 0;
 
     font: 500 1rem/0.8 $font-default;
@@ -10,6 +10,8 @@
     background-color: initial;
 
     @media screen and (min-width: $breakpoint-medium) {
+        padding: 0 5px;
+
         font-size: 1.125rem;
     }
 

@@ -1,0 +1,5 @@
+mixin footer-social(items)
+    each item in items
+        li.footer-social__item
+            a(href=item.link)
+                img(width=item.pic.width, height=item.pic.height, alt=item.pic.alt, src=item.pic.src)
